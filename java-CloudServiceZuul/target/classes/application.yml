@@ -1,0 +1,17 @@
+server:
+  port: 8280
+
+spring:
+  application:
+    name: java-cloud-zuul-proxy
+
+eureka:
+  client:
+    service-url:  
+      defaultZone: http://genvict:gv123456@localhost:8761/eureka,http://genvict:gv123456@localhost:8762/eureka
+      
+zuul:
+  routes:
+    java-wbe-cloud-platform: /ws/cuigl/**
+  #ignored-services:     #忽略指定微服务,多个微服务之间使用逗号分隔
+    

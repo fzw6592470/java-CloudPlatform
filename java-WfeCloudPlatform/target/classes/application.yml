@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: java-wfe-cloud-platform
+    
+server:
+  port: 8080
+
+feign:
+  hystrix:
+    enabled: true

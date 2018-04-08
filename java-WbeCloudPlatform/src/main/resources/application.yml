@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: java-wbe-cloud-platform
+  cloud:
+    config:
+      server: 
+        git: 
+          uri: https://github.com/fzw6592470/nodejsLession/     # 配置git仓库的地址
+          search-paths: config                             # git仓库地址下的相对地址，可以配置多个，用,分割。
+          username:                                         # git仓库的账号
+          password:                                     # git仓库的密码
+    bus:
+      trace:
+        enabled: true
+server:
+  port: 18001
+

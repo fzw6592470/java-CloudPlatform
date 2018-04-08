@@ -1,0 +1,15 @@
+security:
+  basic:
+    enabled: true
+  user:
+    name: genvict
+    password: gv123456
+server:
+  port: 8762
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://genvict:gv123456@localhost:8762/eureka,http://genvict:gv123456@localhost:8761/eureka
