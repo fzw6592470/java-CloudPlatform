@@ -12,6 +12,16 @@ spring:
     bus:
       trace:
         enabled: true
+  zipkin:
+    base-url: http://localhost:9000
+  sleuth:
+    sampler:
+      percentage: 1.0
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
 server:
   port: 18001
 

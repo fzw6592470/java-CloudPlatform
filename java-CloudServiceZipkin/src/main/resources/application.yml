@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: java-cloud-service-zipkin
+  sleuth:
+    sampler: 
+      percentage: 0.1
+  zipkin:
+    baseUrl: http://localhost:9000
+    enabled: true    
+  
+server:
+  port: 9000 
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://genvict:gv123456@localhost:8761/eureka,http://genvict:gv123456@localhost:8762/eureka
