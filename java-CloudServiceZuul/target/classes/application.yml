@@ -12,6 +12,14 @@ eureka:
       
 zuul:
   routes:
-    java-wbe-cloud-platform: /ws/cuigl/**
+    api-a:
+      path: /ws/platform/**
+      serviceId: java-wbe-cloud-platform
+    #java-wbe-cloud-platform: /ws/cuigl/**
   #ignored-services:     #忽略指定微服务,多个微服务之间使用逗号分隔
+  retryable: true
+  
+ribbon:
+  MaxAutoRetries: 2
+  MaxAutoRetriesNextServer: 0 
     

@@ -19,6 +19,7 @@
     <module>java-CloudHystrixDashboard</module>
     <module>java-CloudServiceZuul</module>
     <module>java-WbeCloudMember</module>
+    <module>java-CloudServiceZipkin</module>
   </modules>
 
     <parent>

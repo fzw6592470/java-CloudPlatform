@@ -23,6 +23,12 @@ public class UserEndpoint {
     @ResponseBody
     public User detail(@PathVariable String loginName) {
         String memos = "I come form " + this.serverPort;
+        logger.info(memos);
+        try{
+            Thread.sleep(1000000);
+        }catch ( Exception e){
+            logger.error(" hello two error",e);
+        }
         return new User(loginName, loginName, "/avatar/default.png", memos);
     }
 

@@ -7,10 +7,10 @@
     <artifactId>java-CloudPlatform</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <groupId>com.genvict.zuul</groupId>
-  <artifactId>java-CloudServiceZuul</artifactId>
+  <groupId>com.genvict.zipkin</groupId>
+  <artifactId>java-CloudServiceZipkin</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>java-CloudServiceZuul</name>
+  <name>java-CloudServiceZipkin</name>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -21,19 +21,15 @@
   <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-zuul</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-eureka</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-eureka-server</artifactId>
+            <groupId>io.zipkin.java</groupId>
+            <artifactId>zipkin-server</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.springframework.retry</groupId>
-            <artifactId>spring-retry</artifactId>
+            <groupId>io.zipkin.java</groupId>
+            <artifactId>zipkin-autoconfigure-ui</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -62,3 +58,4 @@
         </plugins>
     </build>
 </project>
+
