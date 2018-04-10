@@ -1,0 +1,31 @@
+server:
+  port: 8041
+spring:
+  application:
+    name: java-cloud-service-config
+  cloud:
+    config:
+      server:
+        git:
+#            uri: ssh://git@218.17.55.25:9022/cuigl     # 配置git仓库的地址
+            uri: https://github.com/fzw6592470/nodejsLession     # 配置git仓库的地址
+            search-paths:  config           # git仓库地址下的相对地址，可以配置多个，用,分割。
+            username:                             # git仓库的账号
+            password:  
+            force-pull: true
+        native:
+          searchLocations: file:F:/JavaWorkSpace/configRepository
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+security:
+  user:
+    password: gv123456
+    name: genvicter
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://genvict:gv123456@localhost:8761/eureka,http://genvict:gv123456@localhost:8762/eureka   ## 注册中心eurka地址

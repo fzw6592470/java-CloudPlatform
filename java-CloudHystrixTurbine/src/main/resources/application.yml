@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: java-cloud-hystrix-dashboard-turbine
+
+server:
+  port: 8060
+  
+turbine:
+  appConfig: java-wbe-cloud-platform,java-cloud-zuul-proxy,java-wfe-cloud-platform,java-cloud-service-config
+  aggregator:
+    clusterConfig: default
+  clusterNameExpression: new String("default")
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://genvict:gv123456@localhost:8761/eureka,http://genvict:gv123456@localhost:8762/eureka

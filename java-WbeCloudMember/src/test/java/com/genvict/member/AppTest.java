@@ -1,38 +1,38 @@
 package com.genvict.member;
 
-import junit.framework.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.genvict.member.domain.User;
+import com.genvict.member.mapper.UserMapper;
+
+import org.junit.Assert;
+import org.junit.Test;
+
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
 
-/**
- * Unit test for simple App.
- */
+@RunWith(SpringRunner.class)
+@SpringBootTest
 public class AppTest 
     extends TestCase
 {
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public AppTest( String testName )
-    {
-        super( testName );
-    }
+	@Autowired
+    private UserMapper userMapper;
 
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( AppTest.class );
-    }
-
-    /**
-     * Rigourous Test :-)
-     */
-    public void testApp()
-    {
-        assertTrue( true );
+    @Test
+    @Transactional
+    public void test(){
+    	User user = new User();
+    	user.setUserId(12345);
+    	user.setUserName("张三");
+    	user.setPhone("18779453377");
+    	user.setPassword("123456");
+        userMapper.insert(user);
+        User u = userMapper.selectByPrimaryKey(12345);
+        Assert.assertEquals("张三", u.getUserName());
     }
 }
