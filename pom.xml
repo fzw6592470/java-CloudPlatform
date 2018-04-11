@@ -22,6 +22,7 @@
     <module>java-CloudServiceZipkin</module>
     <module>java-CloudServiceConfigTwo</module>
     <module>java-CloudHystrixTurbine</module>
+    <module>java-CloudMessagePush</module>
   </modules>
 
     <parent>
