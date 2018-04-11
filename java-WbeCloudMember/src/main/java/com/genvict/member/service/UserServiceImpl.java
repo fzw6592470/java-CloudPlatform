@@ -3,12 +3,13 @@ package com.genvict.member.service;
 
 import javax.annotation.Resource;
 
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import com.genvict.member.domain.User;
 import com.genvict.member.mapper.UserMapper;
 
-@Service("userService")
+@Component
 public class UserServiceImpl implements UserService {
 	
 	@Resource

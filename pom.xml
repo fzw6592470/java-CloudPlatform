@@ -23,6 +23,7 @@
     <module>java-CloudServiceConfigTwo</module>
     <module>java-CloudHystrixTurbine</module>
     <module>java-CloudMessagePush</module>
+    <module>java-WbeCloudApp</module>
   </modules>
 
     <parent>

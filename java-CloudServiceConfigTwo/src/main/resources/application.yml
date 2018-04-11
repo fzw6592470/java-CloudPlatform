@@ -13,8 +13,8 @@ spring:
             username:                             # git仓库的账号
             password:  
             force-pull: true
-        native:
-          searchLocations: file:F:/JavaWorkSpace/configRepository
+        #native:
+          #searchLocations: file:F:/JavaWorkSpace/configRepository
   rabbitmq:
     host: localhost
     port: 5672
