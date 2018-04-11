@@ -2,7 +2,6 @@ package com.genvict.member.web;
 
 import java.util.List;
 
-import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
 import org.slf4j.Logger;
@@ -17,7 +16,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.genvict.member.domain.User;
-import com.genvict.member.mapper.UserMapper;
 import com.genvict.member.service.UserService;
 
 @RestController
@@ -39,14 +37,14 @@ public class UserEndpoint {
 //        return new User(loginName, loginName, "/avatar/default.png", memos);
 //    }
     
-    @Resource
+    @Autowired
     private UserService userService;
     
     @RequestMapping("/showUser")
     @ResponseBody
-    public com.genvict.member.domain.User toIndex(HttpServletRequest request, Model model){
+    public User toIndex(HttpServletRequest request, Model model){
         int userId = Integer.parseInt(request.getParameter("id"));
-        com.genvict.member.domain.User user = this.userService.getUserById(userId);
+        User user = this.userService.getUserById(userId);
         return user;
     }
 }

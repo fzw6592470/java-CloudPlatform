@@ -24,7 +24,9 @@ security:
   user:
     password: gv123456
     name: genvicter
-
+management:
+  security:
+     enabled: false
 eureka:
   client:
     serviceUrl:

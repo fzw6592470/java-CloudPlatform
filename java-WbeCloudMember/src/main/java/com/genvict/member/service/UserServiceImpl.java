@@ -3,16 +3,16 @@ package com.genvict.member.service;
 
 import javax.annotation.Resource;
 
-import org.springframework.stereotype.Component;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.genvict.member.domain.User;
 import com.genvict.member.mapper.UserMapper;
 
-@Component
+@Service
 public class UserServiceImpl implements UserService {
 	
-	@Resource
+	@Autowired
 	private UserMapper userMapper;
 	
 	public User getUserById(int userId) {
