@@ -24,6 +24,7 @@
     <module>java-CloudHystrixTurbine</module>
     <module>java-CloudMessagePush</module>
     <module>java-WbeCloudApp</module>
+    <module>java-CloudServiceScheduledTasks</module>
   </modules>
 
     <parent>
